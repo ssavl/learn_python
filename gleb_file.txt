@@ -1,1 +1,1 @@
-test txt push
+test txt pull
