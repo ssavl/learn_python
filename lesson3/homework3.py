@@ -17,9 +17,14 @@ print(dt_now - delta)
 print(dt_now - delta1)
 
 # str to datatime
+
 date_string = '01/01/25 12:10:03.234567'
-date_dt = datetime.strptime(date_string, '%m/%d/%Y ')
-print(date_dt)
+format_datetime = date_string.replace('/', ' ').replace(':', ' ').replace(' ', ' ').replace('.', ' ').split()
+print(format_datetime, type(format_datetime))
+real_datetime = datetime(int(format_datetime[0]), int(format_datetime[0]), int(format_datetime[0]),
+                         int(format_datetime[0]), int(format_datetime[0]),
+                         int(format_datetime[0]), int(format_datetime[0]))
+print(real_datetime)                # ЭТО УЖАСНЫЙ КОД, СОГЛАСЕН
 
 
 
