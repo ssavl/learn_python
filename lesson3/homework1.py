@@ -5,7 +5,7 @@ with open('referat.txt', 'r', encoding='utf-8') as myfile:
 
 
 count_words = str(content)
-print(len(set(count_words.split())))
+print(len(count_words.split()))
 
 
 ln = content.replace('.', '!')
