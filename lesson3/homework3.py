@@ -1,5 +1,6 @@
 import locale
 from datetime import datetime, date, timedelta
+import time
 """Напечатайте в консоль даты: вчера, сегодня, 30 дней назад
 Превратите строку "01/01/25 12:10:03.234567" в объект datetime"""
 dt_now = datetime.now()
@@ -18,14 +19,8 @@ print(dt_now - delta1)
 
 # str to datatime
 
-date_string = '01/01/25 12:10:03.234567'
-format_datetime = date_string.replace('/', ' ').replace(':', ' ').replace(' ', ' ').replace('.', ' ').split()
-print(format_datetime, type(format_datetime))
-real_datetime = datetime(int(format_datetime[0]), int(format_datetime[0]), int(format_datetime[0]),
-                         int(format_datetime[0]), int(format_datetime[0]),
-                         int(format_datetime[0]), int(format_datetime[0]))
-print(real_datetime)                # ЭТО УЖАСНЫЙ КОД, СОГЛАСЕН
-
-
+date_string1 = '01/01/25 12:10:03.234567'
+real_datetime = datetime.strptime(date_string1, "%d/%m/%y %H:%M:%S.%f") # Очень долго искал на какую букву форматируется миллисекунды
+print(real_datetime, type(real_datetime))
 
 
